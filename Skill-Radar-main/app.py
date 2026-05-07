@@ -1,10 +1,11 @@
-giimport csv
+import csv
 from datetime import datetime
 from io import StringIO
 
 from flask import Flask, Response, jsonify, flash, redirect, render_template, request, url_for
 from flask_login import LoginManager, current_user, login_required, login_user, logout_user
 
+app = Flask(__name__)
 from config import Config
 from models import (
     SKILL_FIELDS,
